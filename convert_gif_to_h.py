@@ -18,7 +18,7 @@ rgb_im = im.convert('RGB')
 print("\n** Converting image **\n")
 
 f = open("image.h", "w")
-f.write("const uint16_t image_LUT[] = { 0x00A0,0x01C0,0x02A0,0x1CE2,0x0060,0x0020,0x0140,0x1702,0x22A4,0x572A,0x2124,0x4AA9,0xE75C,0x7CAF,0,0};\n")
+f.write("const uint16_t image_LUT[] = { 0x00A0,0x01C0,0x02A0,0x1CE2,0x0060,0x0020,0x0140,0x1702,0x22A4,0x572A,0x2124,0x4AA9,0xE75C,0x7CAF,0,0}; // 16bit color. can not be used directly with pico-display class. use manual color palette in .cpp instead\n")
 f.write("const uint8_t images[] = {\n")
 
 colors = []
